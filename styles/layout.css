@@ -1,0 +1,107 @@
+body {
+    margin: 0px;
+    font-family: Futura, futura-pt, sans-serif;  
+    background: #000000;
+    transition: 2s;
+}
+
+.container {
+   margin: 0px 120px 0px 120px;
+}
+
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+.title {
+    position: absolute;
+    color: white;
+    padding: 50px 0px 0px 0px;
+    font-size: 100px;
+    animation: fadein 2s;
+}
+
+
+.nav {
+	display: table; 
+    margin: 0 auto;
+    position: absolute;
+    top: 90%;
+    right: 50px;
+}
+
+ul {
+    min-width: 100px ;
+	list-style: none;
+    padding: 10px 10px 0px 10px;
+    transition: 2s;
+}
+
+.navitem {
+    font-size: 20px;
+    transition: 0.5s;
+    display: inline;
+    padding: 10px;
+}
+
+.navitem:hover {
+    opacity: 0.5;
+ }
+
+a:link, a:visited { 
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.image-placement {
+    position: relative;
+    top: 170px;
+    display: flex;
+    width: 100%;
+    overflow: scroll;
+}
+
+.mywork {
+    padding: 50px 50px 0px 50px;
+    max-width: 50%;
+    max-height: 50%;
+    transition: 3s;
+}
+
+.modechange {
+    position: absolute;
+    display: flex;
+    top: 90%;
+    left: 3%;
+}
+
+.fa-arrow-left {
+    color: white;
+    position: absolute;
+    top: 4%;
+    left: 3%;
+    transition: 1s;
+}
+
+.fa-sun {
+    color: white;
+    position: absolute;
+    transition: 1s;
+}
+
+.fa-moon {
+    color: #000000;
+    position: absolute;
+    transition: 1s;
+}
+
+#darken {
+    display: none;
+}
+
+.fas:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+}

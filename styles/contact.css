@@ -1,0 +1,129 @@
+html, body{
+    margin: 0px;
+    font-family: Futura, futura-pt, sans-serif;  
+    background: #000000;
+}
+
+.container {
+    margin: 0px 150px 0px 150px;
+
+}
+
+#goback {
+    position: absolute;
+    top: 4%;
+    left: 3%;
+    transition: 1s;
+}
+
+.fas, .fab {
+    color: white;
+    transition: 1s;
+    padding: 20px;
+}
+
+.fas:hover {
+    transform: scale(1.2);
+    cursor: pointer;
+}
+
+.fab:hover {
+    transform: scale(1.2);
+    cursor: pointer;
+}
+
+.nav {
+	display: table; 
+    margin: 0 auto;
+    position: absolute;
+    top: 90%;
+    right: 50px;
+}
+
+ul {
+    min-width: 100px ;
+	list-style: none;
+    padding: 10px 10px 0px 10px;
+    transition: 2s;
+}
+
+.navitem {
+    font-size: 20px;
+    transition: 0.5s;
+    display: inline;
+    padding: 10px;
+}
+
+.navitem:hover {
+    opacity: 0.5;
+ }
+
+a:link, a:visited { 
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#about {
+    position: absolute;
+    margin-right: 150px;
+    top: 20%;
+    left: 55%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    width: 30%;
+    height: 60%;
+}
+
+p {
+    font-size: 20px;
+    color: white;
+    text-align: justify;
+}
+
+.contacts {
+    position: absolute;
+    display: inline-block;
+    text-align: center;
+    top: 90%;
+}
+
+#title {
+    position: absolute;
+    color: white;
+    padding: 50px 0px 0px 0px;
+    font-size: 80px;
+}
+
+
+img {
+    position: absolute;
+    top: 25%;
+    left: 20%;
+    max-width: 60%;
+    max-height: 60%;
+    transition: transform 2s;
+    transform: translateY(20px);
+    animation: rotate 3s ease-out 0s alternate infinite running;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate3d(0, 0, 0, -30deg);
+    }
+    
+    25% {
+        transform: translateY(50px);
+    }
+
+    50%{
+        transform: translateY(-50px);
+
+    }
+
+    100%{
+        transform: rotate3d(1, 1, 1, 30deg);
+    }
+}

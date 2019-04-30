@@ -1,0 +1,200 @@
+html, body{
+    margin: 0px;
+    font-family: Futura, futura-pt, sans-serif;  
+    background: #000000;
+}
+
+.main-container{
+   margin: 0px;
+   text-align: center;
+}
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+#firstname{
+    color: white;
+    font-size: 90px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-75%, -100%);
+    animation: fadein 2s;
+}
+
+
+#lastname{
+    color: white;
+    font-size: 90px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-30%, -10%);
+    animation: fadein 5s;
+}
+
+#firstname span {
+	will-change: transform;
+	display: inline-block;
+	white-space: pre;
+}
+
+#camera{
+    position: absolute;
+    opacity: 0.4;
+    width: 450px;
+    height: 300px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: fadein-img 5s;
+}
+
+#dive-button{
+    color: white;
+    font-size: 30px;
+    font-style: italic;
+    position: absolute;
+    bottom: 60px;
+    right: 100px;
+    transition: 0.5s;
+}
+
+#dive-button:hover {
+    cursor: pointer;
+    transform: scale(1.2);
+}
+
+.fa-angle-double-right {
+    color: white;
+    position: absolute;
+    bottom: 50px;
+    right: 250px;
+    animation: nudge 2s ease-out 0s normal infinite running;
+}
+
+@keyframes nudge{
+    0%, 100%{
+        transform: translate3d(0px, 0px, 0px);
+    }
+    50%{
+        transform: translate3d(30px, 0px, 0px);
+    }
+   
+    75%{
+        transform: translate3d(30px, 0px, 0px);
+    }
+}
+
+.frontimages{
+    position: fixed;
+    display: flex;
+    overflow: hidden;
+    align-items: center;
+}
+
+#normal{
+    align-self: flex-start;
+    position: relative;
+    right: 100px;
+    overflow: hidden;
+    animation: move 7s ease-in-out alternate 0s infinite running;
+}
+
+@keyframes move{
+    from{
+        top: 0px;
+        transform: translateY(0%) translate3d(0px, 0px, 0px);
+    }
+    to{
+        top: -1400px;
+        transform: translateY(100%) translate3d(-100px, -700px, 0px);
+    }
+}
+#reversed{
+    align-self: flex-end;
+    position: relative;
+    left: 100px;
+    animation: rev-move 7s ease-in-out alternate 0s infinite running;
+}
+
+@keyframes rev-move{
+    from{
+        top: 0px;
+        transform: translateY(0%) translate3d(0px, 0px, 0px);
+    }
+    to{
+        top: -1400px;
+        transform: translateY(100%) translate3d(100px, -700px, 0px);
+    }
+    
+}
+
+.theimages{
+    padding: 90px;
+    opacity: 0.4;
+    animation: fadein-img 6s;
+    transition: 1s;
+    max-height: 35%;
+    max-width: 35%;   
+}
+@keyframes fadein-img{
+    from {opacity:0}
+    to {opacity: 0.4}
+}
+
+/* hidden (navbar) */
+
+.hidden-container {
+    top: 100%;
+    height: 100%;
+    width: 0%;
+    background-color: white;
+    overflow: hidden;
+    transition: 2s;
+}
+
+.menu {
+    position: fixed;
+    top: 15%;
+    left: 33%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+.navlink {
+    font-size: 80px;
+    padding: 20px;
+}
+
+.hide {
+    display: none;
+}
+
+
+
+.fa-arrow-left {
+    position: absolute;
+    top: 4%;
+    left: 4%;
+    transition: 0.5s;
+}
+
+.fa-arrow-left:hover {
+    transform: scale(1.2);
+    cursor: pointer;
+}
+
+a:link, a:visited {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+a:hover {
+    transform: scale(1.2) translateY(-10%);
+}
